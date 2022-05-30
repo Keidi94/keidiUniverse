@@ -7,14 +7,18 @@ const operatingProfit = {
   "2014-09": 108,
   "2014-12": 146,
 };
+
+const chart_labels = Object.keys(operatingProfit);
+const chart_data = Object.values(operatingProfit);
+
 // 아래는 차트를 표현하기 위한 코드입니다.//
-new Chart(document.getElementById("line-chart"), {
+new Chart(document.getElementById("Chart_OperatingProfit"), {
   type: "line",
   data: {
-    labels: ["2014-03", "2014-06", "2014-09", "2014-12"],
+    labels: chart_labels,
     datasets: [
       {
-        data: [118, 87, 108, 146],
+        data: chart_data,
         label: "OperatingProfit",
         borderColor: "#3e95cd",
         fill: false,
