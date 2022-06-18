@@ -1,4 +1,4 @@
-const Year = 2014;
+const year = 2014;
 const month = 3;
 
 const operatingProfit = {
