@@ -2,15 +2,28 @@
   "name": "keidiuniverse",
   "version": "1.0.0",
   "description": "The page for investment using visualization of interesting company.",
-  "main": "app.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Keidi94/keidiUniverse.git"
+  },
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js"
   },
   "author": "KEIDI",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Keidi94/keidiUniverse/issues"
   },
-  "homepage": "https://github.com/Keidi94/keidiUniverse#readme"
+  "homepage": "https://github.com/Keidi94/keidiUniverse#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/node": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "nodemon": "^2.0.16"
+  }
 }
