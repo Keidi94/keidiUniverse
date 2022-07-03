@@ -1,16 +1,16 @@
 import express from "express";
 import morgan from "morgan";
-
+import globalRouter from "./routers/globalRouter";
+import userRouter from "./routers/userRouter";
+import companyRouter from "./routers/companyRouter";
 const PORT = 8080;
 
 const app = express();
 const logger = morgan("dev");
-
-const handleHome = (req, res) => {
-  console.log("somebody is trying to go home");
-  return res.send("final message");
-};
 app.use(logger);
-app.get("/", handleHome);
+
+app.use("/", globalRouter);
+app.use("/users", userRouter);
+app.use("/company", companyRouter);
 
 app.listen(PORT);
