@@ -1,10 +1,21 @@
 import express from "express";
-import { universe, data, chart, rim } from "../controllers/companyController";
+import {
+  search,
+  universe,
+  data,
+  chart,
+  rim,
+  upload,
+  editData,
+} from "../controllers/companyController";
 const companyRouter = express.Router();
 
+companyRouter.get("/search", search);
+companyRouter.get("/upload", upload);
 companyRouter.get("/universe", universe);
-companyRouter.get("/data", data);
-companyRouter.get("/chart", chart);
-companyRouter.get("/rim", rim);
+companyRouter.get("/:id/edit", editData);
+companyRouter.get("/:id/data", data);
+companyRouter.get("/:id/chart", chart);
+companyRouter.get("/:id/rim", rim);
 
 export default companyRouter;

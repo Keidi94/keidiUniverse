@@ -8,16 +8,22 @@ global Router {
 / -> Home
 /join -> Join
 /login -> Login
+/search -> Search
+
 }
 
 user Router {
-/users/edit -> Edit user
+/users/:id -> User's profile
+/users/edit -> Edit My profile
 /users/delete -> Delete user
+/users/logout -> Log Out
 }
 
 company Router {
-/company/universe
-/company/data
-/company/chart
-/company/rim
+/company/universe -> Universe
+/company/upload -> Upload Company Data
+/company/:id/edit -> Edit Company Data
+/company/:id/chart
+/company/:id/rim
+/company/:id/data
 }
